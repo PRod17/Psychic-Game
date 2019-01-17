@@ -9,6 +9,8 @@ function generateAlphabet(){
   var alphabet = generateAlphabet();
   var $alreadyGuessed = document.getElementById("already-guessed");
   console.log($alreadyGuessed);
+  var guessesAllowed= document.getElementById("remaining-guesses");
+  console.log(guessesAllowed);
   
   var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
   
@@ -27,4 +29,15 @@ function generateAlphabet(){
 
   var wins = 0;
   var losses = 0;
-  var ties = 0;
+  var guessesAllowed = 9;
+
+
+    if (userGuess === computerGuess) {
+    wins++;
+}
+    if (userGuess !== computerGuess) {
+    losses++;
+}
+    if (userGuess) {
+    guessesAllowed--;
+}1
