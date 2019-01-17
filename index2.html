@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+    <script type="text/javascript">
+
+
+        <div>
+
+            <h1>
+                <p id="directions">Be a Psychic! I thinking of a letter, can you guess it?</p>
+            </h1>
+            <h3>
+                <p id="wins-text">Win</p>
+                <p id="losses-text">Lose</p>
+                <p id="guesses-remaining">Guesses Remaining</p>
+                <p id="userguess"></p>
+            </h3>
+        </div>
+
+        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "z"];
+
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        
+        var userChoiceText = document.getElementById("userguess");
+        var winsText = document.getElementById("wins");
+        var lossesText = document.getElementById("losses");
+        var tiesText = document.getElementById("guesses-remaining");
+
+
+        document.onkeyup = function (event) {
+
+
+            var userGuess = event.key;
+
+
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            if (userGuess === computerGuess) {
+                wins++;
+            }
+            if (userGuess !== computerGuess) {
+                losses++;
+            }
+
+
+
+    </script>
+</body>
+
+</html>
